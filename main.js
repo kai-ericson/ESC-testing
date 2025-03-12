@@ -167,7 +167,7 @@ function setCardInfo(i, list, div){
         if(text[49]!=" "){
             for(let i = 48; i > 0; i--){
                 if(text[i]==" "){
-                    shortenedTextext = text.slice(0,i) + "...";
+                    shortenedText = text.slice(0,i) + "...";
                     break;
                 }
             }
