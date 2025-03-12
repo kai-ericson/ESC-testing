@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ESC Hacker Escape Rooms</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src='filter.js' type="module"></script>
+    <script defer src='challenges.js' type="module"></script>
+    <script defer src="booking.js"></script>
+</head>
+
+<body>
+    <header class="main">
+        <img class="main__img" src="imgs/Logo.webp" alt="logotyp for ESC">
+        <h1 class="main__titel">Hacker Escape Rooms</h1>
+        <a class="main__open" href=""><i class="fa-solid fa-bars main__icon"></i></a>
+    </header>
+    <nav class="main__nav">
+        <a class="main__close" href="#"><i class="fa-solid fa-xmark"></i></a>
+        <ul class="main__ul">
+            <li class="main__li"><a class="main__li__item" href="">Play online</a></li>
+            <li class="main__li"><a class="main__li__item" href="">Play on-site</a></li>
+            <li class="main__li"><a class="main__li__item" href="about.html">The story</a></li>
+            <li class="main__li"><a class="main__li__item" href="">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="filter">
+        <div class="filter__menu">
+            <h2 class="filter__header">Our challenges</h2>
+            <button class="filter__button" type="button">Filter challenges</button>
+        </div>
+        <div class="filter__alternative">
+            <p class="alternative__text">Filter challenges</p>
+            <i class="alternative__close fa-solid fa-xmark"></i>
+            <div class="filter__type">
+                <p class="type__text">By type</p>
+                <input class="type__online" type="checkbox" id="online">
+                <label class="type__label" for="online"> Include online challenges</label>
+                <br>
+                <input class="type__onSite" type="checkbox" id="on-site">
+                <label class="type__label" for="on-site"> Include on-site challenges</label>
+            </div>
+            <div class="filter__rating">
+                <p class="rating__text">By rating</p>
+                <div class="filter__stars">
+                    <div class="rating__to">
+                        <i class="rating__star star__from fa-solid fa-star"></i>
+                        <i class="rating__star star__from fa-solid fa-star"></i>
+                        <i class="rating__star star__from fa-solid fa-star"></i>
+                        <i class="rating__star star__from fa-solid fa-star"></i>
+                        <i class="rating__star star__from fa-solid fa-star"></i>
+                    </div>
+                    <p class="star__text">to</p>
+                    <div class="rating__from">
+                        <i class="rating__star star__to fa-solid fa-star"></i>
+                        <i class="rating__star star__to fa-solid fa-star"></i>
+                        <i class="rating__star star__to fa-solid fa-star"></i>
+                        <i class="rating__star star__to fa-solid fa-star"></i>
+                        <i class="rating__star star__to fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="filter__tags">
+                <p class="tags__text">By tags</p>
+                <span class="tags__label">Bash</span>
+                <span class="tags__label">Coding</span>
+                <span class="tags__label">Web</span>
+                <span class="tags__label">Ssh</span>
+                <span class="tags__label">Ctf</span>
+                <span class="tags__label">JavaScript</span>
+                <span class="tags__label">Phreaking</span>
+                <span class="tags__label">Electronics</span>
+                <span class="tags__label">Hacking</span>
+                <span class="tags__label">Linux</span>
+            </div>
+            <div class="filter__keyword">
+                <label class="keyword__text" for="keyword"> Or type to search for keyword</label>
+                <br>
+                <input class="keyword__input" placeholder="Start typing to filter" type="text" id="keyword">
+            </div>
+        </div>
+    </div>
+    <div class="sort-container">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+            <option value="rating">Rating</option>
+            <option value="name">Name</option>
+        </select>
+    </div>
+    <div class="book">
+        <h2 class="book__filtered">No matching challenges</h2>
+        <div class="book__div">
+
+        </div>
+    </div>
+    <div class="bookingModal">
+        <div class="bookingModal__div">
+            <p class="bookingModal__titel">Book room</p>
+            <p class="bookingModal__text">What date would you like to come?</p>
+            <button class="bookingModal__close" href="#"><i class="fa-solid fa-xmark"></i></button>
+            <input class="bookingModal__input" type="date" name="bookDate">
+            <label class="bookingModal__label" for="bookDate">Date</label>
+            <p class="bookingModal_noTime"></p>
+            <button class="bookingModal__open">Search avalible times</button>
+        </div>
+    </div>
+    <div class="bookRoom">
+        <div class="bookRoom__div">
+            <p class="bookRoom__titel">Book room</p>
+            <button class="bookRoom__close" href="#"><i class="fa-solid fa-xmark"></i></button>
+            <input class="bookRoom__input__name" type="text" name="name">
+            <label class="bookRoom__label__name" for="name">Name</label>
+            <input class="bookRoom__input__email" type="email" name="email">
+            <label class="bookRoom__label__email" for="email">E-mail</label>
+            <input class="bookRoom__input__phone" type="tel" name="phone" pattern="[0-9]{10}">
+            <label class="bookRoom__label__phone" for="phone">Mobilenumber</label>
+            <select class="bookRoom__input__time" name="time" id="selTime"></select>  
+            <label class="bookRoom__label__time" id="bookTime" for="">What time?</label>
+            <select class="bookRoom__input__part" name="participants" id="selPart"></select>
+            <label class="bookRoom__label__part" for="participants">How many participants?</label>
+            <button class="bookRoom__submit" type="submit">Submit booking</button>
+        </div>
+    </div>
+    <div class="submitBooking">
+        <div class="submitBooking__div">
+            <p class="submitBooking__text">Thank you!</p>
+            <a class="submitBooking__return" href="challenges.html">Back to challenges</a>
+        </div>
+    </div>
+    <footer>
+        <div class="about">
+            <h2 class="about__titel">[Esc] Hacker Escape Rooms</h2>
+            <p class="about__text">Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo
+                spectant haec quoque
+                vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+        </div>
+        <nav class="sitemap">
+            <h2 class="sitemap__titel">Site map</h2>
+            <ul class="ul_SiteMap">
+                <li class="sitemap_li"><a class="a_SiteMap" href="about.html">The Story</a></li>
+                <li class="sitemap_li"><a class="a_SiteMap" href="">Contact Us</a></li>
+                <li class="sitemap_li"><a class="a_SiteMap" href="">Legal</a></li>
+            </ul>
+        </nav>
+        <nav class="playlist">
+            <ul class="playlist__ul">
+                <li class="playlist__li"><a class="a_PlayList" href="">Play online</a></li>
+                <li class="playlist__li"><a class="a_PlayList" href="">Play on-site</a></li>
+            </ul>
+        </nav>
+        <nav class="contact">
+            <h2 class="contact__titel">Follow us on</h2>
+            <ul class="contact_ul">
+                <li class="contact__li"><a class="a_Contact" href="">Facebook</a></li>
+                <li class="contact__li"><a class="a_Contact" href="">Instagram</a></li>
+                <li class="contact__li"><a class="a_Contact" href="">Twitter</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

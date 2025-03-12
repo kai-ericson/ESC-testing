@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ESC Hacker Escape Rooms</title>
+    <meta name="description" content="Escape rooms on-line or on-site">
+    <meta name="keywords" content="escaperoom">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src='main.js' type = "module"></script>
+    <script defer src="booking.js"></script>
+</head>
+
+<body>
+    <header class="main">
+        <img class="main__img" src="imgs/Logo.webp" alt="logotyp for ESC">
+        <h1 class="main__titel">Hacker Escape Rooms</h1>
+        <a class="main__open" href=""><i class="fa-solid fa-bars main__icon"></i></a>
+    </header>
+    <nav class="main__nav">
+        <a class="main__close" href="#"><i class="fa-solid fa-xmark"></i></a>
+        <ul class="main__ul">
+            <li class="main__li"><a class="main__li__item" href="challenges.html">Play online</a></li>
+            <li class="main__li"><a class="main__li__item" href="challenges.html">Play on-site</a></li>
+            <li class="main__li"><a class="main__li__item" href="about.html">The story</a></li>            
+            <li class="main__li"><a class="main__li__item" href="">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="main__div">
+        <img class="main__div__img" src="imgs/hacker_photo.webp"
+            alt="person sitting with his back showing infront of computers">
+        <a class="red__link" href="challenges.html">Online challenges</a>
+        <a class="blue__link" href="challenges.html">On-site challenges</a>
+        <a class="online__link" href="challenges.html">Online challenges</a>
+    </div>
+
+    <div class="quot">
+        <div class="quot__div-first">
+            <img class="quot__div__img" src="imgs/face_photo.webp" alt="headshot representing quoted person">
+            <p class="quot__div__text">This is a quote about how amazing this place is and how much fun me and my
+                friends
+                had
+                when we tried it
+                <small class="quot__div__person">John Doe, visited us in September 2021</small>
+            </p>
+        </div>
+        <div class="quot__div-second">
+            <img class="quot__div__img" src="imgs/face_photo.webp" alt="headshot representing quoted person">
+            <p class="quot__div__text">This is a quote about how amazing this place is and how much fun me and my
+                friends
+                had
+                when we tried it
+                <small class="quot__div__person">John Doe, visited us in September 2021</small>
+            </p>
+        </div>
+    </div>
+
+    <div class="book">
+        <h2 class="book__titel">Popular challenges right now</h2>
+       <div class="book__div">
+       </div>
+        <nav class="book_nav">
+            <a class="red__link" href="challenges.html">Online challenges</a>
+            <a class="blue__link" href="challenges.html">On-site challenges</a>
+            <a class="online__link" href="challenges.html">Online challenges</a>
+        </nav>
+    </div>
+
+    <div class="story">
+        <p class="story__text">Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo
+            spectant haec quoque
+            vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.
+        </p>
+        <a class="red__link" href="about.html">Read the full story</a>
+    </div>
+
+    <div class="booking">
+        <h2 class="booking__titel">Play with your friends or build your team stronger at work</h2>
+        <img class="booking__img" src="imgs/nesa-by-makers.webp"
+            alt="two persons sitting beside eachother looking on a computer">
+        <p class="booking__text"> Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.
+            Nemo
+            nocere tibi erit, et
+            non inimicos, et</p>
+        <a class="red__link" href="challenges.html">Book on-site today</a>
+    </div>
+    <div class="play">
+        <h2 class="play__titel">Play online or visit our venue for one of our 25 escape rooms</h2>
+        <img class="play_img" src="imgs/kelly-sikkema.webp" alt="person viewed from side">
+        <p class="play__text">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo
+            nocere
+            tibi erit, et non inimicos, et</p>
+        <a class="red__link" href="challenges.html">See all challenges</a>
+    </div>
+    <div class="bookingModal">
+        <div class="bookingModal__div">
+            <p class="bookingModal__titel">Book room</p>
+            <p class="bookingModal__text">What date would you like to come?</p>
+            <button class="bookingModal__close" href="#"><i class="fa-solid fa-xmark"></i></button>
+            <input class="bookingModal__input" type="date" name="bookDate">
+            <label class="bookingModal__label" for="bookDate">Date</label>
+            <p class="bookingModal_noTime"></p>
+            <button class="bookingModal__open">Search avalible times</button>
+        </div>
+    </div>
+    <div class="bookRoom">
+        <div class="bookRoom__div">
+            <p class="bookRoom__titel">Book room</p>
+            <button class="bookRoom__close" href="#"><i class="fa-solid fa-xmark"></i></button>
+            <input class="bookRoom__input__name" type="text" name="name">
+            <label class="bookRoom__label__name" for="name">Name</label>
+            <input class="bookRoom__input__email" type="email" name="email">
+            <label class="bookRoom__label__email" for="email">E-mail</label>
+            <input class="bookRoom__input__phone" type="tel" name="phone" pattern="[0-9]{10}">
+            <label class="bookRoom__label__phone" for="phone">Mobilenumber</label>
+            <select class="bookRoom__input__time" name="time" id="selTime"></select>  
+            <label class="bookRoom__label__time" id="bookTime" for="">What time?</label>
+            <select class="bookRoom__input__part" name="participants" id="selPart"></select>
+            <label class="bookRoom__label__part" for="participants">How many participants?</label>
+            <button class="bookRoom__submit" type="submit">Submit booking</button>
+        </div>
+    </div>
+    <div class="submitBooking">
+        <div class="submitBooking__div">
+            <p class="submitBooking__text">Thank you!</p>
+            <a class="submitBooking__return" href="challenges.html">Back to challenges</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="about">
+            <h2 class="about__titel">[Esc] Hacker Escape Rooms</h2>
+            <p class="about__text">Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo
+                spectant haec quoque
+                vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+        </div>
+        <nav class="sitemap">
+            <h2 class="sitemap__titel">Site map</h2>
+            <ul class="ul_SiteMap">
+                <li class="sitemap_li"><a class="a_SiteMap" href="about.html">The Story</a></li>
+                <li class="sitemap_li"><a class="a_SiteMap" href="">Contact Us</a></li>
+                <li class="sitemap_li"><a class="a_SiteMap" href="">Legal</a></li>
+            </ul>
+        </nav>
+        <nav class="playlist">
+            <ul class="playlist__ul">
+                <li class="playlist__li"><a class="a_PlayList" href="challenges.html">Play online</a></li>
+                <li class="playlist__li"><a class="a_PlayList" href="challenges.html">Play on-site</a></li>
+            </ul>
+        </nav>
+        <nav class="contact">
+            <h2 class="contact__titel">Follow us on</h2>
+            <ul class="contact_ul">
+                <li class="contact__li"><a class="a_Contact" href="">Facebook</a></li>
+                <li class="contact__li"><a class="a_Contact" href="">Instagram</a></li>
+                <li class="contact__li"><a class="a_Contact" href="">Twitter</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
